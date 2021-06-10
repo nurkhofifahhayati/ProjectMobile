@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cek Ongkir</string>
+    <string name="electronic">Electronics</string>
+    <string name="apparel">Apparel</string>
+    <string name="bnv">Food and Beverages</string>
+    <string name="pharmacy">Pharmacy</string>
+    <string name="automotive">Automotive</string>
+    <string name="etc">Et Cetera</string>
+</resources>
