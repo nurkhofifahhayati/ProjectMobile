@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:text="Sender Name"
+            android:fontFamily="@font/bahnschrift"/>
+
+        <TextView
+            android:id="@+id/typesShipmentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:text="Types of Shipment"
+            android:fontFamily="@font/bahnschrift"/>
+
+        <TextView
+            android:id="@+id/weightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:text="Weight of Goods"
+            android:fontFamily="@font/bahnschrift"/>
+
+        <TextView
+            android:id="@+id/originText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:text="Origin"
+            android:fontFamily="@font/bahnschrift"/>
+
+        <TextView
+            android:id="@+id/senderAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:text="Sender Address"
+            android:fontFamily="@font/bahnschrift"/>
+
+        <TextView
+            android:id="@+id/destinationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:text="Destination"
+            android:fontFamily="@font/bahnschrift"/>
+
+        <TextView
+            android:id="@+id/receiverAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:text="Receiver Address"
+            android:fontFamily="@font/bahnschrift"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

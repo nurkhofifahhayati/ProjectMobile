@@ -1,9 +1,12 @@
 <resources>
-    <string name="app_name">Cek Ongkir</string>
+    <string name="app_name">veti-deliver</string>
     <string name="electronic">Electronics</string>
     <string name="apparel">Apparel</string>
     <string name="bnv">Food and Beverages</string>
     <string name="pharmacy">Pharmacy</string>
     <string name="automotive">Automotive</string>
     <string name="etc">Et Cetera</string>
+    <string name="home">Home</string>
+    <string name="shipment">Shipment</string>
+    <string name="list">List Shipment</string>
 </resources>
