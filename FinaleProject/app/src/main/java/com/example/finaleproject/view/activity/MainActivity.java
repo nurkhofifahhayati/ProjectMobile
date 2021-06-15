@@ -1,4 +1,5 @@
-package com.example.finaleproject;
+package com.example.finaleproject.view.activity;
+
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,9 +8,10 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.finaleproject.fragment.HomeFragment;
-import com.example.finaleproject.fragment.ListFragment;
-import com.example.finaleproject.fragment.ShipmentFragment;
+import com.example.finaleproject.R;
+import com.example.finaleproject.view.fragment.HomeFragment;
+import com.example.finaleproject.view.fragment.ListFragment;
+import com.example.finaleproject.view.fragment.ShipmentFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

@@ -6,6 +6,9 @@
     <string name="pharmacy">Pharmacy</string>
     <string name="automotive">Automotive</string>
     <string name="etc">Et Cetera</string>
+    <string name="jne">JNE</string>
+    <string name="pos">POS Indonesia</string>
+    <string name="tiki">TIKI</string>
     <string name="home">Home</string>
     <string name="shipment">Shipment</string>
     <string name="list">List Shipment</string>
