@@ -22,7 +22,7 @@ public class DataShipment {
     private String types;
 
     @ColumnInfo(name = "weight")
-    private int weight;
+    private String weight;
 
     @ColumnInfo(name = "courierServices")
     private String courierServices;
@@ -74,11 +74,11 @@ public class DataShipment {
         this.types = types;
     }
 
-    public int getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 

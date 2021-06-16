@@ -1,12 +1,12 @@
 package com.example.finaleproject.view.activity;
 
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
-import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.example.finaleproject.R;
 import com.example.finaleproject.view.fragment.HomeFragment;
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
                     switch (item.getItemId()){
-                        case R.id.navHome:
+                       case R.id.navHome:
                             selectedFragment = new HomeFragment();
                             break;
                         case R.id.navShipment:
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
                     }
 
-                    getSupportFragmentManager()
+                    int commit = getSupportFragmentManager()
                             .beginTransaction()
                             .replace(R.id.mainFrame, selectedFragment)
                             .commit();

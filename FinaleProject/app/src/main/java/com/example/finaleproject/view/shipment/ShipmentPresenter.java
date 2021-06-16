@@ -41,7 +41,7 @@ public class ShipmentPresenter implements ShipmentContact.DataPresenter{
     }
 
     @Override
-    public void editData(String name, String date, String types, int weight, String origin, String senderAdd, String destination, String receiverAdd, AppDatabase appDatabase) {
+    public void editData(String name, String date, String types, String weight, String origin, String senderAdd, String destination, String receiverAdd, AppDatabase appDatabase) {
         final DataShipment dataShipment = new DataShipment();
         dataShipment.setName(name);
         dataShipment.setDate(date);
