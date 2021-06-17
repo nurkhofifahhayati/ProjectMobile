@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finaleproject.R;
 import com.example.finaleproject.data.entity.DataShipment;
-import com.example.finaleproject.view.activity.EditDataActivity;
+import com.example.finaleproject.view.edit.EditDataActivity;
 
 import java.util.List;
 
@@ -41,11 +42,11 @@ public class ShipmentAdapter extends RecyclerView.Adapter<ShipmentAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final DataShipment data = list.get(position);
-        holder.id.setText(String.valueOf(data.getIdShipment()));
+        holder.id.setText(data.getIdShipment());
         holder.tvName.setText(data.getName());
         holder.tvDate.setText(data.getDate());
         holder.tvTypes.setText(data.getTypes());
-        holder.tvWeight.setText(String.valueOf(data.getWeight()));
+        holder.tvWeight.setText(data.getWeight());
         holder.tvCourier.setText(data.getCourierServices());
         holder.tvOrigin.setText(data.getOrigin());
         holder.tvSenderAdd.setText(data.getSenderAddress());
@@ -60,22 +61,22 @@ public class ShipmentAdapter extends RecyclerView.Adapter<ShipmentAdapter.ViewHo
         holder.btnUpdate.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, EditDataActivity.class);
-                intent.putExtra("name", data.getName());
-                intent.putExtra("date", data.getDate());
-                intent.putExtra("types", data.getTypes());
-                intent.putExtra("weight", data.getWeight());
-                intent.putExtra("origin", data.getOrigin());
-                intent.putExtra("senderAddress", data.getSenderAddress());
-                intent.putExtra("destination", data.getDestination());
-                intent.putExtra("receiverAddress", data.getReceiverAddress());
+                Intent update = new Intent(context.getApplicationContext(), EditDataActivity.class);
+                update.putExtra("name", data.getName());
+                update.putExtra("date", data.getDate());
+                update.putExtra("types", data.getTypes());
+                update.putExtra("weight", data.getWeight());
+                update.putExtra("courierServices", data.getCourierServices());
+                update.putExtra("origin", data.getOrigin());
+                update.putExtra("senderAddress", data.getSenderAddress());
+                update.putExtra("destination", data.getDestination());
+                update.putExtra("receiverAddress", data.getReceiverAddress());
 
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                update.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-                context.startActivity(intent);
+                context.startActivity(update);
             }
         });
-
     }
 
     @Override
@@ -86,6 +87,7 @@ public class ShipmentAdapter extends RecyclerView.Adapter<ShipmentAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView id, tvName, tvDate, tvTypes, tvWeight, tvCourier, tvOrigin;
         TextView tvSenderAdd, tvDestination, tvReceiverAdd;
+        ImageView imgLogo;
         Button btnDelete, btnUpdate;
 
         public ViewHolder(@NonNull View itemView) {
@@ -102,6 +104,9 @@ public class ShipmentAdapter extends RecyclerView.Adapter<ShipmentAdapter.ViewHo
             tvReceiverAdd = itemView.findViewById(R.id.receiverAddressText);
             btnDelete = itemView.findViewById(R.id.btnDelete);
             btnUpdate = itemView.findViewById(R.id.btnUpdate);
+            imgLogo = itemView.findViewById(R.id.imgLogo);
         }
     }
 }
+
+

@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground">
+    android:background="@color/colorBackground"
+    tools:context=".view.shipment.ShipmentActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout2"
@@ -295,6 +296,15 @@
                 android:layout_margin="30dp"
                 android:background="@drawable/button_background"
                 android:text="Submit Shipment"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_reset"
+                android:text="Reset Data"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>

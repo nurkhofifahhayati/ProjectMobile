@@ -16,7 +16,7 @@ public interface ShipmentContact {
 
     interface DataPresenter {
         // readData (AppDatabase database);
-        void editData(String name, String date, String types, String weight, String origin,
+        void editData(String name, String date, String types, String weight, String courier, String origin,
                       String senderAdd, String destination, String receiverAdd, AppDatabase appDatabase);
         void deleteData(DataShipment dataShipment, AppDatabase appDatabase);
 

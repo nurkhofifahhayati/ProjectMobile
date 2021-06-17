@@ -19,7 +19,7 @@ public class ShipmentPresenter implements ShipmentContact.DataPresenter{
         this.viewDelete = viewDelete;
     }
 
-    class EditData extends AsyncTask<Void, Void, Integer>{
+    class EditData extends AsyncTask<Void, Void, Integer> {
         private AppDatabase appDatabase;
         private DataShipment dataShipment;
 
@@ -41,12 +41,13 @@ public class ShipmentPresenter implements ShipmentContact.DataPresenter{
     }
 
     @Override
-    public void editData(String name, String date, String types, String weight, String origin, String senderAdd, String destination, String receiverAdd, AppDatabase appDatabase) {
+    public void editData(String name, String date, String types, String weight, String courier, String origin, String senderAdd, String destination, String receiverAdd, AppDatabase appDatabase) {
         final DataShipment dataShipment = new DataShipment();
         dataShipment.setName(name);
         dataShipment.setDate(date);
         dataShipment.setTypes(types);
         dataShipment.setWeight(weight);
+        dataShipment.setCourierServices(courier);
         dataShipment.setOrigin(origin);
         dataShipment.setSenderAddress(senderAdd);
         dataShipment.setDestination(destination);

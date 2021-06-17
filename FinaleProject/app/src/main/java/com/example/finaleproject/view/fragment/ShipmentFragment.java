@@ -1,6 +1,5 @@
 package com.example.finaleproject.view.fragment;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,8 +15,7 @@ import com.example.finaleproject.R;
 import com.example.finaleproject.view.shipment.ShipmentActivity;
 
 public class ShipmentFragment extends Fragment {
-    private Button btnClickInput;
-    Context context;
+    public Button btnClickInput = null;
 
     @Nullable
     @Override
@@ -29,7 +27,8 @@ public class ShipmentFragment extends Fragment {
         btnClickInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ShipmentActivity.class));
+                Intent intent = new Intent(getActivity().getApplication(), ShipmentActivity.class);
+                startActivity(intent);
             }
         });
 

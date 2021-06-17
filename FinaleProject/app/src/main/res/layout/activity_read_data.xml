@@ -1,149 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cvMain"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="15dp"
-    app:cardElevation="10dp">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".view.activity.ReadDataActivity">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp"
-        android:background="@color/colorAccent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/cardview_shadow_end_color">
+    </androidx.recyclerview.widget.RecyclerView>
 
-        <TextView
-            android:id="@+id/idShipment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="ID Shipment"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <TextView
-            android:id="@+id/nameText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="Sender Name"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <TextView
-            android:id="@+id/dateText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="Date of Shipment"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <TextView
-            android:id="@+id/typesShipmentText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="Types of Shipment"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <TextView
-            android:id="@+id/weightText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="Weight of Goods"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <TextView
-            android:id="@+id/courierText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="Courier Services"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <TextView
-            android:id="@+id/originText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="Origin"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <TextView
-            android:id="@+id/senderAddressText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="Sender Address"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <TextView
-            android:id="@+id/destinationText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="Destination"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <TextView
-            android:id="@+id/receiverAddressText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="Receiver Address"
-            android:fontFamily="@font/bahnschrift"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/btnDelete"
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:text="DELETE"
-                android:layout_weight="1"
-                android:background="@drawable/button_edit_delete"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"
-                android:textSize="10sp"
-                android:layout_marginTop="10dp"/>
-            <Button
-                android:id="@+id/btnUpdate"
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:text="UPDATE"
-                android:layout_weight="1"
-                android:layout_toRightOf="@id/btnDelete"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/button_edit_delete"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"
-                android:textSize="10sp"
-                android:layout_marginTop="10dp"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</LinearLayout>

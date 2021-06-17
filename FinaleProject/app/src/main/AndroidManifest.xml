@@ -14,13 +14,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="q">
-        <activity android:name="com.example.finaleproject.view.activity.EditDataActivity"></activity>
+        <activity android:name="com.example.finaleproject.view.edit.EditDataActivity"></activity>
         <activity android:name="com.example.finaleproject.view.activity.ReadDataActivity"></activity>
         <activity android:name="com.example.finaleproject.view.shipment.ShipmentActivity"></activity>
+
         <activity android:name="com.example.finaleproject.view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

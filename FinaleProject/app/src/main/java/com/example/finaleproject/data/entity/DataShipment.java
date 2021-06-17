@@ -41,6 +41,7 @@ public class DataShipment {
 
     // SETTER DAN GETTER ===========================================================================
 
+
     @NonNull
     public String getIdShipment() {
         return idShipment;

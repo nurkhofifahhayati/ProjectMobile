@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.finaleproject.R;
 import com.example.finaleproject.data.entity.AppDatabase;
 import com.example.finaleproject.data.entity.DataShipment;
-import com.example.finaleproject.view.fragment.ListFragment;
 import com.example.finaleproject.view.shipment.ShipmentAdapter;
 import com.example.finaleproject.view.shipment.ShipmentContact;
 import com.example.finaleproject.view.shipment.ShipmentPresenter;
@@ -31,7 +30,7 @@ public class ReadDataActivity extends AppCompatActivity implements ShipmentConta
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_list);
+        setContentView(R.layout.activity_read_data);
 
         shipmentPresenter = new ShipmentPresenter( this);
         recyclerView = findViewById(R.id.rv_main);
@@ -45,16 +44,16 @@ public class ReadDataActivity extends AppCompatActivity implements ShipmentConta
         List list;
         list = appDatabase.dao().getData();
 
-        shipmentAdapter = new ShipmentAdapter(getApplicationContext(), list, this);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            shipmentAdapter = new ShipmentAdapter(getApplicationContext(), list, this);
+        }
         recyclerView.setAdapter(shipmentAdapter);
     }
-
-
 
     @Override
     public void successDelete() {
         Toast.makeText(getApplicationContext(), "Success Deleted!", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getApplicationContext(), ListFragment.class));
+        startActivity(new Intent(getApplicationContext(), ReadDataActivity.class));
     }
 
     @Override
